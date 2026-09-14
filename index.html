@@ -1,0 +1,324 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAI — Your Personal AI Stylist</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>✦</span> StyleAI
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#wardrobe">My Wardrobe</a>
+                <a href="#stylist">AI Stylist</a>
+                <a href="#discover">Discover</a>
+            </div>
+
+            <button class="profile-btn">My Profile</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="small-title">YOUR PERSONAL AI STYLIST</p>
+
+            <h1>
+                Dress better.<br>
+                <span>Feel confident.</span>
+            </h1>
+
+            <p class="hero-text">
+                StyleAI creates personalized outfits from clothes
+                you already own and discovers new styles made for you.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="generateOutfit()">
+                    ✨ Style Me
+                </button>
+
+                <a href="#wardrobe" class="secondary-btn">
+                    View My Wardrobe
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+
+            <div class="ai-header">
+                <span class="status-dot"></span>
+                AI Stylist
+                <span class="online">ONLINE</span>
+            </div>
+
+            <div class="style-preview">
+                <div class="outfit-image">
+                    👕
+                </div>
+
+                <div class="outfit-info">
+                    <p>Today's recommendation</p>
+                    <h3>Smart Casual</h3>
+
+                    <div class="tags">
+                        <span>Black</span>
+                        <span>Minimal</span>
+                        <span>Casual</span>
+                    </div>
+
+                    <button onclick="generateOutfit()">
+                        Generate Outfit →
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="feature">
+            <div class="feature-icon">👔</div>
+            <h3>Your Wardrobe</h3>
+            <p>Keep all your clothes organized in one place.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">✨</div>
+            <h3>AI Styling</h3>
+            <p>Get outfit combinations based on your wardrobe.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">◉</div>
+            <h3>Made For You</h3>
+            <p>Recommendations based on your personal features.</p>
+        </div>
+
+    </section>
+
+
+    <!-- Wardrobe -->
+    <section class="section" id="wardrobe">
+
+        <div class="section-heading">
+            <div>
+                <p class="small-title">YOUR COLLECTION</p>
+                <h2>My Wardrobe</h2>
+            </div>
+
+            <button class="add-btn" onclick="addClothing()">
+                + Add Item
+            </button>
+        </div>
+
+
+        <div class="wardrobe-grid">
+
+            <div class="clothing-card">
+                <div class="clothing-img shirt">👕</div>
+                <h3>White Shirt</h3>
+                <p>Shirts · Casual</p>
+            </div>
+
+            <div class="clothing-card">
+                <div class="clothing-img black">👖</div>
+                <h3>Black Jeans</h3>
+                <p>Bottoms · Casual</p>
+            </div>
+
+            <div class="clothing-card">
+                <div class="clothing-img jacket">🧥</div>
+                <h3>Denim Jacket</h3>
+                <p>Outerwear · Casual</p>
+            </div>
+
+            <div class="clothing-card">
+                <div class="clothing-img shoe">👟</div>
+                <h3>White Sneakers</h3>
+                <p>Shoes · Everyday</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI Stylist -->
+    <section class="stylist-section" id="stylist">
+
+        <div class="stylist-content">
+
+            <p class="small-title">AI STYLIST</p>
+
+            <h2>
+                What should you<br>
+                <span>wear today?</span>
+            </h2>
+
+            <p>
+                Tell StyleAI what you're dressing for and we'll
+                create a personalized outfit using your wardrobe.
+            </p>
+
+            <div class="occasion-buttons">
+                <button onclick="selectOccasion(this)">College</button>
+                <button onclick="selectOccasion(this)">Date</button>
+                <button onclick="selectOccasion(this)">Party</button>
+                <button onclick="selectOccasion(this)">Work</button>
+            </div>
+
+            <button class="primary-btn generate-btn"
+                    onclick="generateOutfit()">
+                ✨ Generate My Outfit
+            </button>
+
+        </div>
+
+
+        <div class="ai-result" id="aiResult">
+
+            <div class="result-label">
+                ✨ AI RECOMMENDATION
+            </div>
+
+            <h3 id="outfitTitle">Effortless Smart Casual</h3>
+
+            <div class="outfit-items">
+
+                <div>
+                    <div class="item-icon">👕</div>
+                    <p>White Shirt</p>
+                </div>
+
+                <div>
+                    <div class="item-icon">👖</div>
+                    <p>Black Jeans</p>
+                </div>
+
+                <div>
+                    <div class="item-icon">👟</div>
+                    <p>White Sneakers</p>
+                </div>
+
+            </div>
+
+            <div class="style-score">
+                <span>Style Match</span>
+                <strong id="score">94%</strong>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <p class="ai-message" id="aiMessage">
+                Clean, minimal and perfect for a relaxed day.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Discover -->
+    <section class="section" id="discover">
+
+        <div class="section-heading">
+            <div>
+                <p class="small-title">INSPIRED BY YOU</p>
+                <h2>Discover New Styles</h2>
+            </div>
+        </div>
+
+
+        <div class="style-grid">
+
+            <div class="style-card">
+                <div class="style-photo photo-one">
+                    🧑🏻‍💼
+                </div>
+
+                <div class="style-info">
+                    <h3>Minimalist</h3>
+                    <p>Clean silhouettes · Neutral colors</p>
+                    <button>Explore Style</button>
+                </div>
+            </div>
+
+
+            <div class="style-card">
+                <div class="style-photo photo-two">
+                    🧑🏻‍🎤
+                </div>
+
+                <div class="style-info">
+                    <h3>Streetwear</h3>
+                    <p>Relaxed fits · Bold layers</p>
+                    <button>Explore Style</button>
+                </div>
+            </div>
+
+
+            <div class="style-card">
+                <div class="style-photo photo-three">
+                    🧑🏻‍🎨
+                </div>
+
+                <div class="style-info">
+                    <h3>Smart Casual</h3>
+                    <p>Polished · Effortless</p>
+                    <button>Explore Style</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            ✦ StyleAI
+        </div>
+
+        <p>
+            Your wardrobe. Your style. Your AI stylist.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 StyleAI. Frontend Demo.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
