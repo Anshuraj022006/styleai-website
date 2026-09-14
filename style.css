@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f7f5f1;
+    color: #171717;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    background: #f7f5f1;
+    border-bottom: 1px solid #dedbd5;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.profile-btn {
+    border: 1px solid #222;
+    background: transparent;
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 25px;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #777;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 7vw, 85px);
+    line-height: 0.98;
+    font-weight: 500;
+}
+
+h1 span,
+.stylist-content h2 span {
+    color: #8b6752;
+    font-style: italic;
+}
+
+.hero-text {
+    color: #666;
+    line-height: 1.7;
+    margin-top: 28px;
+    max-width: 480px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.primary-btn {
+    background: #171717;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.primary-btn:hover {
+    background: #8b6752;
+}
+
+.secondary-btn {
+    border: 1px solid #aaa;
+    padding: 14px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #222;
+}
+
+
+/* ================= AI CARD ================= */
+
+.hero-card {
+    width: 420px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 25px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.ai-header {
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #5f9b69;
+    border-radius: 50%;
+}
+
+.online {
+    margin-left: auto;
+    font-size: 10px;
+    color: #5f9b69;
+}
+
+.style-preview {
+    margin-top: 25px;
+    background: #f1eee9;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.outfit-image {
+    height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 120px;
+}
+
+.outfit-info {
+    padding: 22px;
+}
+
+.outfit-info p {
+    color: #888;
+    font-size: 13px;
+}
+
+.outfit-info h3 {
+    font-size: 25px;
+    margin: 5px 0 15px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tags span {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.outfit-info button {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    background: #171717;
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    max-width: 1150px;
+    margin: auto;
+}
+
+.feature {
+    padding: 45px 30px;
+    border-right: 1px solid #ddd;
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ================= GENERAL SECTION ================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 25px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.add-btn {
+    border: 1px solid #222;
+    background: transparent;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* ================= WARDROBE ================= */
+
+.wardrobe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.clothing-card {
+    background: white;
+    border-radius: 18px;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.clothing-card:hover {
+    transform: translateY(-5px);
+}
+
+.clothing-img {
+    height: 230px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+}
+
+.shirt {
+    background: #e9e6df;
+}
+
+.black {
+    background: #d7d4ce;
+}
+
+.jacket {
+    background: #d9e0e5;
+}
+
+.shoe {
+    background: #eee8df;
+}
+
+.clothing-card h3 {
+    margin: 15px 5px 5px;
+}
+
+.clothing-card p {
+    margin-left: 5px;
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* ================= AI STYLIST ================= */
+
+.stylist-section {
+    background: #e7e1d9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 100px;
+
+    padding: 100px 10%;
+}
+
+.stylist-content {
+    max-width: 450px;
+}
+
+.stylist-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    line-height: 1.05;
+}
+
+.stylist-content > p {
+    margin-top: 25px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.occasion-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.occasion-buttons button {
+    border: 1px solid #999;
+    background: transparent;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.occasion-buttons button.active {
+    background: #171717;
+    color: white;
+}
+
+.generate-btn {
+    margin-top: 25px;
+}
+
+
+/* ================= AI RESULT ================= */
+
+.ai-result {
+    background: white;
+    width: 430px;
+    padding: 35px;
+    border-radius: 25px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.result-label {
+    color: #8b6752;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.ai-result h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 12px 0 25px;
+}
+
+.outfit-items {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.item-icon {
+    background: #f0ede8;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+    border-radius: 12px;
+}
+
+.outfit-items p {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #666;
+}
+
+.style-score {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.style-score strong {
+    color: #8b6752;
+}
+
+.progress {
+    background: #eee;
+    height: 6px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.progress div {
+    width: 94%;
+    height: 100%;
+    background: #8b6752;
+    border-radius: 10px;
+    transition: width 0.7s;
+}
+
+.ai-message {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+
+/* ================= DISCOVER ================= */
+
+.style-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.style-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.style-photo {
+    height: 330px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 100px;
+}
+
+.photo-one {
+    background: #ddd5ca;
+}
+
+.photo-two {
+    background: #d0d8dc;
+}
+
+.photo-three {
+    background: #e1d6d1;
+}
+
+.style-info {
+    padding: 22px;
+}
+
+.style-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.style-info p {
+    color: #888;
+    font-size: 13px;
+    margin: 8px 0 18px;
+}
+
+.style-info button {
+    border: none;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #171717;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+footer > p {
+    color: #aaa;
+    margin-top: 12px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .wardrobe-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .stylist-section {
+        flex-direction: column;
+        gap: 50px;
+        padding: 80px 25px;
+    }
+
+    .ai-result {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .style-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .profile-btn {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .wardrobe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stylist-content h2 {
+        font-size: 42px;
+    }
+
+    .outfit-items {
+        gap: 5px;
+    }
+}
